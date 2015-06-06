@@ -35,7 +35,6 @@ TMX_Map::TMX_Map()
 	TileHeight		= 0;
 	BackgroundColor = "";
 
-
 }
 
 void TMX_Map::Load_Map(char *data)

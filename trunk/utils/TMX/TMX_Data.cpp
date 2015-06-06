@@ -18,7 +18,8 @@ TMX_Data::TMX_Data(char *data, xml_node<> *node)
 void TMX_Data::Load_Data(char *data, xml_node<> *node)
 {
 	if(xml_attribute<> *iattr = node->first_attribute("encoding"))		Encoding   = iattr->value();
-	if(xml_attribute<> *iattr = node->first_attribute("compression"))	Compression	  = iattr->value(); else Compression = "";
+	else if(xml_attribute<> *iattr = node->first_attribute("compression"))	Compression	  = iattr->value(); 
+	else Compression = "";
 																		Value	= node->value();
 	Value.erase(remove_if(Value.begin(), Value.end(), ::isspace), Value.end());
 
