@@ -6,7 +6,7 @@
 #endif
 
 #include <SDL2/SDL_mixer.h>
-#include "utils/TMX/TMX_SDLClass.h"
+#include "utils/TMX/SDL/TMX_SDLClass.h"
 
 
 

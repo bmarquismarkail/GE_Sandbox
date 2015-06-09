@@ -3,7 +3,7 @@
 #include <fstream>
 #include <cmath>
 #include "TMX_SDLClass.h"
-#include "TMX_Utils.h"
+#include "../TMX_Utils.h"
 
 #include <SDL2/SDL_image.h>
 
@@ -14,10 +14,10 @@
 	bmask = 0x0000ff00;
 	amask = 0x000000ff;
 #else
-	rmask = 0x000000ff;
-	gmask = 0x0000ff00;
-	bmask = 0x00ff0000;
-	amask = 0xff000000;
+    #define	rmask 0x000000ff
+    #define	gmask 0x0000ff00
+    #define	bmask 0x00ff0000
+    #define	amask 0xff000000
 #endif
 
 SDL_TMXMap::SDL_TMXMap()
