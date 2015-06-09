@@ -3,7 +3,7 @@
 
 #include <SDL2/SDL.h>
 
-#include "TMX_Map.h"
+#include "../TMX_Map.h"
 
 
 class SDL_TMXMap : public TMX_Map
