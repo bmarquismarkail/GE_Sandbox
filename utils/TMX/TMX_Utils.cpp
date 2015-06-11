@@ -19,6 +19,7 @@ void TMX_Uncompress(char* input, char* output, unsigned int in_size, unsigned in
     if(!strcmp(Scheme, ""))
     {
         memcpy(output, input, in_size);
+        return;
     }
     if(!strcmp(Scheme, "zlib"))
     {
@@ -26,6 +27,7 @@ void TMX_Uncompress(char* input, char* output, unsigned int in_size, unsigned in
         int iserror = uncompress((unsigned char*)output, &pLen, (unsigned char*)input, in_size);
         if(iserror)
             cout << "miniz error:" << iserror;
+        return;
     }
     if(!strcmp(Scheme, "gzip"))
     {
@@ -61,6 +63,7 @@ void TMX_Uncompress(char* input, char* output, unsigned int in_size, unsigned in
         }
 
         inflateEnd(&strm);
+        return;
     }
 }
 
