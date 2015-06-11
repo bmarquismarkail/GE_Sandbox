@@ -2,6 +2,7 @@
 #include <sstream>
 #include <fstream>
 #include <cmath>
+#include <stdlib.h> // For the exit function
 #include "TMX_SDLClass.h"
 #include "../TMX_Utils.h"
 
@@ -12,6 +13,7 @@
 	rmask = 0xff000000;
 	gmask = 0x00ff0000;
 	bmask = 0x0000ff00;
+	amask = 0x000000ff;
 	amask = 0x000000ff;
 #else
     #define	rmask 0x000000ff
@@ -126,7 +128,11 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
                         unsigned long Tiles_Per_Line = (long) ceil(Float_TPL);
                         SrcRect.x = srcindex % Tiles_Per_Line * (getTileset(tilesetindex).getTileWidth() + getTileset(tilesetindex).getSpacing());
                         SrcRect.y = srcindex / Tiles_Per_Line * (getTileset(tilesetindex).getTileWidth() + getTileset(tilesetindex).getSpacing());
-                        SDL_BlitSurface(TileSurf[tilesetindex], &SrcRect, LayerSurf[l], &DstRect);
+                        if( SDL_BlitSurface(TileSurf[tilesetindex], &SrcRect, LayerSurf[l], &DstRect) )
+						{
+							cout << "SDL_BlitSurface Failed: " SD_GetError() << endl; // if for some reason the application does not implode and instead run this code, we need to know why it crapped us.
+							exit (-2)
+						}
                     }
                 }
             }
