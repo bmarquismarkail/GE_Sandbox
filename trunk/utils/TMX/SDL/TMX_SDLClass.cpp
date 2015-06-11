@@ -121,7 +121,7 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
                     {
                         DstRect.x = x * getTileWidth();
                         unsigned tilesetindex = findTileset(tiledata[l][y*getWidth()+x]);
-                        int srcindex = tiledata[l][y*getWidth()+x] - getTileset(tilesetindex).getGID();
+                        unsigned srcindex = tiledata[l][y*getWidth()+x] - getTileset(tilesetindex).getGID();
                         SrcRect.h = getTileset(tilesetindex).getTileHeight();
                         SrcRect.w = getTileset(tilesetindex).getTileWidth();
                         float Float_TPL = (float) getTileset(tilesetindex).getImage(0).getWidth() / (getTileset(tilesetindex).getTileWidth() + getTileset(tilesetindex).getSpacing());
@@ -130,8 +130,8 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
                         SrcRect.y = srcindex / Tiles_Per_Line * (getTileset(tilesetindex).getTileWidth() + getTileset(tilesetindex).getSpacing());
                         if( SDL_BlitSurface(TileSurf[tilesetindex], &SrcRect, LayerSurf[l], &DstRect) )
 						{
-							cout << "SDL_BlitSurface Failed: " SD_GetError() << endl; // if for some reason the application does not implode and instead run this code, we need to know why it crapped us.
-							exit (-2)
+							cout << "SDL_BlitSurface Failed: " << SDL_GetError() << endl; // if for some reason the application does not implode and instead run this code, we need to know why it crapped us.
+							exit (-2);
 						}
                     }
                 }
