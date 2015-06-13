@@ -60,7 +60,7 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
             }
             std::stringstream *ss_xml = new std::stringstream;
             *ss_xml << in_xml->rdbuf();
-            char *xml_data = new char[ss_xml->str().length()+1];
+            char *xml_data = new char[ss_xml->str().length()+1]();
             strcpy(xml_data, ss_xml->str().c_str());
             in_xml->close();
             delete ss_xml;
@@ -84,23 +84,24 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
         CKey.r = (color & 0xFF0000)   >> 16;
         CKey.g = (color & 0x00FF00)   >> 8 ;
         CKey.b = (color & 0x0000FF)        ;
-        SDL_SetColorKey(MapSurf, SDL_TRUE, SDL_MapRGB(TileSurf[0]->format, CKey.r, CKey.g, CKey.b));
+        SDL_SetColorKey( MapSurf , SDL_TRUE , SDL_MapRGB(TileSurf[0]->format , CKey.r , CKey.g , CKey.b));
         SDL_Rect SrcRect;
         SDL_Rect DstRect;
         DstRect.h = getTileHeight();
         DstRect.w = getTileWidth();
-        char **in_data  = new char* [getNumLayers()];
-        char **out_data = new char* [getNumLayers()];
+        unsigned char **in_data  = new unsigned char* [getNumLayers()];
+        unsigned char **out_data = new unsigned char* [getNumLayers()];
         unsigned long **tiledata = new unsigned long* [getNumLayers()];
         for(unsigned i = 0; i < getNumLayers(); i++)
         {
-            in_data[i] = new char [getLayer(i).getData().getData().size()+1];
-            out_data[i] = new char[getWidth()*getHeight()*4+1];
-            strcpy(in_data[i], getLayer(i).getData().getData().c_str());
-            char *dec_data = new char[(getLayer(i).getData().getData().size()*3/4)+1];
-            TMX_Decode(in_data[i], dec_data);
-            TMX_Uncompress(dec_data, out_data[i], (getLayer(i).getData().getData().size() * 3/4), getWidth() * getHeight() * 4, getLayer(i).getData().getCompression().c_str());
+            in_data[i]  = new unsigned char [getLayer(i).getData().getData().size()];
+            out_data[i] = new unsigned char [getWidth()*getHeight()*4];
+            memcpy( in_data[i] , getLayer(i).getData().getData().c_str() , getLayer(i).getData().getData().size() );
+            unsigned char *dec_data = new unsigned char[( getLayer(i).getData().getData().size()* 3/4 )];
+            TMX_Decode( in_data[i] , dec_data , getLayer(i).getData().getData().size() );
+            TMX_Uncompress( dec_data , out_data[i] , ( getLayer(i).getData().getData().size() * 3/4 ), getWidth() * getHeight() * 4, getLayer(i).getData().getCompression().c_str());
             tiledata[i] = (unsigned long*) out_data[i];
+			// TODO: For loop to determine if code is working correctly.
         }
 
         delete[]in_data;
