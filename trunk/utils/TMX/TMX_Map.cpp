@@ -17,7 +17,7 @@ TMX_Map::TMX_Map(const char* fn)
 		exit(-1);
 	stringstream *ss_xml = new stringstream;
 	*ss_xml << in_xml.rdbuf();
-	char *xml_data = new char[ss_xml->str().length()+1];
+	char *xml_data = new char[ss_xml->str().length()+1]();
 	strcpy(xml_data, ss_xml->str().c_str());
 	in_xml.close();
 	delete ss_xml;
