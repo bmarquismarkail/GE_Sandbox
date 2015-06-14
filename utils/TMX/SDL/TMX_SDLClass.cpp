@@ -108,8 +108,6 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
 
         for (unsigned l = 0; l < TMX_Map::getNumLayers(); l++)
         {
-            if(!getLayer(l).isVisible())
-                continue;
 
             LayerSurf.push_back(SDL_CreateRGBSurface(0, getWidth()*getTileWidth(), getHeight()*getTileHeight(), 32, rmask, gmask, bmask, amask));
             SDL_SetSurfaceAlphaMod(LayerSurf[l], getLayer(l).getOpacity() * 255);
@@ -137,7 +135,7 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
                     }
                 }
             }
-            SDL_BlitSurface(LayerSurf[l],NULL, MapSurf, NULL);
+            if(getLayer(l).isVisible()) SDL_BlitSurface(LayerSurf[l],NULL, MapSurf, NULL);
         }
 
         delete[] out_data;
