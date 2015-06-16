@@ -91,17 +91,16 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
         DstRect.w = getTileWidth();
         unsigned char **in_data  = new unsigned char* [getNumLayers()];
         unsigned char **out_data = new unsigned char* [getNumLayers()];
-        unsigned long **tiledata = new unsigned long* [getNumLayers()];
+        unsigned int **tiledata = (unsigned int **) out_data;
         for(unsigned i = 0; i < getNumLayers(); i++)
         {
             in_data[i]  = new unsigned char [getLayer(i).getData().getData().size()];
             out_data[i] = new unsigned char [getWidth()*getHeight()*4];
             memcpy( in_data[i] , getLayer(i).getData().getData().c_str() , getLayer(i).getData().getData().size() );
-            unsigned char *dec_data = new unsigned char[( getLayer(i).getData().getData().size()* 3/4 )];
+            unsigned char *dec_data = new unsigned char[( getLayer(i).getData().getData().size())];
             TMX_Decode( in_data[i] , dec_data , getLayer(i).getData().getData().size() );
-            TMX_Uncompress( dec_data , out_data[i] , ( getLayer(i).getData().getData().size() * 3/4 ), getWidth() * getHeight() * 4, getLayer(i).getData().getCompression().c_str());
-            tiledata[i] = (unsigned long*) out_data[i];
-			// TODO: For loop to determine if code is working correctly.
+            TMX_Uncompress( dec_data , out_data[i] , ( getLayer(i).getData().getData().size() ), getWidth() * getHeight() * 4,
+                           getLayer(i).getData().getCompression().c_str());
         }
 
         delete[]in_data;
@@ -123,13 +122,15 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
                         unsigned srcindex = tiledata[l][y*getWidth()+x] - getTileset(tilesetindex).getGID();
                         SrcRect.h = getTileset(tilesetindex).getTileHeight();
                         SrcRect.w = getTileset(tilesetindex).getTileWidth();
-                        float Float_TPL = (float) getTileset(tilesetindex).getImage(0).getWidth() / (getTileset(tilesetindex).getTileWidth() + getTileset(tilesetindex).getSpacing());
+                        float Float_TPL = (float) getTileset(tilesetindex).getImage(0).getWidth()
+                                                  / (getTileset(tilesetindex).getTileWidth() + getTileset(tilesetindex).getSpacing());
                         unsigned long Tiles_Per_Line = (long) ceil(Float_TPL);
                         SrcRect.x = srcindex % Tiles_Per_Line * (getTileset(tilesetindex).getTileWidth() + getTileset(tilesetindex).getSpacing());
                         SrcRect.y = srcindex / Tiles_Per_Line * (getTileset(tilesetindex).getTileWidth() + getTileset(tilesetindex).getSpacing());
                         if( SDL_BlitSurface(TileSurf[tilesetindex], &SrcRect, LayerSurf[l], &DstRect) )
 						{
-							cout << "SDL_BlitSurface Failed: " << SDL_GetError() << endl; // if for some reason the application does not implode and instead run this code, we need to know why it crapped us.
+							cout << "SDL_BlitSurface Failed: " << SDL_GetError() << endl;
+							// if for some reason the application does not implode and instead run this code, we need to know why it crapped us.
 							exit (-2);
 						}
                     }
@@ -138,7 +139,6 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
             if(getLayer(l).isVisible()) SDL_BlitSurface(LayerSurf[l],NULL, MapSurf, NULL);
         }
 
-        delete[] out_data;
         delete[] tiledata;
         for (unsigned l = 0; l < getNumTilesets(); l++)
             SDL_FreeSurface(TileSurf[l]);
