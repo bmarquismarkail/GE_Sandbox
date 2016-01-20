@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-#include <rapidxml.hpp>
+#include <rapidxml/rapidxml.hpp>
 using namespace rapidxml;
 
 struct TMX_Property

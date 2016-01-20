@@ -68,7 +68,7 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
             MapSurf = SDL_CreateRGBSurface(0, getWidth()*getTileWidth(), getHeight()*getTileHeight(), 32, rmask, gmask, bmask, amask);
         }
 
-        string ResDir = "Resources\\";
+        string ResDir = "Resources/";
         SDL_Surface **TileSurf = new SDL_Surface*[getNumTilesets()];
         for ( unsigned int fn = 0; fn < getNumTilesets(); fn++)
         {

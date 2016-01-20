@@ -28,13 +28,13 @@ int main(int argc, char** argv){
 	int mixRet = Mix_OpenAudio(MIX_DEFAULT_FREQUENCY,MIX_DEFAULT_FORMAT,MIX_DEFAULT_CHANNELS,4096);
 	if (mixRet != 0)
 		return mixRet;
-	mixRet = Mix_Init(MIX_INIT_MOD);
-	if (mixRet != MIX_INIT_MOD)
+	mixRet = Mix_Init(MIX_INIT_MODPLUG);
+	if (mixRet != MIX_INIT_MODPLUG)
 	{
 		cout << "SDLmixer Initiazation Error: " << Mix_GetError() << endl;
 		return mixRet;
 	}
-	Mix_Music *altSamba = Mix_LoadMUS("Resources\\music\\alternativesamba.mod");
+	Mix_Music *altSamba = Mix_LoadMUS("Resources/music/alternativesamba.mod");
 	if (!altSamba)
 	{
 		cout << "alternativesamba.mod is not loaded. Exiting..." << Mix_GetError() << endl;
@@ -57,7 +57,7 @@ int main(int argc, char** argv){
 		std::cout << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
 		return 1;
 	}
-	SDL_TMXMap Map("Resources\\Test.tmx");
+	SDL_TMXMap Map("Resources/Test.tmx");
 	Map.Populate_Map(ren);
 	while (isRunning)
 	{

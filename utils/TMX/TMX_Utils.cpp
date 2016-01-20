@@ -5,7 +5,7 @@
 using namespace std;
 
 #include <miniz/miniz.h>
-#include <miniz/utils/gzip.c>
+//#include <miniz/utils/gzip.c>
 
 void TMX_Decode(unsigned char* input, unsigned char* output, unsigned len)
 {
