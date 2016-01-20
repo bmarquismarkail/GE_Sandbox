@@ -7,6 +7,7 @@
 
 #include <SDL2/SDL_mixer.h>
 #include "utils/TMX/SDL/TMX_SDLClass.h"
+#include "../SFF2ViewerRedux/src/SDL_SFFWrapper.h"
 
 
 
@@ -28,8 +29,8 @@ int main(int argc, char** argv){
 	int mixRet = Mix_OpenAudio(MIX_DEFAULT_FREQUENCY,MIX_DEFAULT_FORMAT,MIX_DEFAULT_CHANNELS,4096);
 	if (mixRet != 0)
 		return mixRet;
-	mixRet = Mix_Init(MIX_INIT_MOD);
-	if (mixRet != MIX_INIT_MOD)
+	mixRet = Mix_Init(MIX_INIT_MODPLUG);
+	if (mixRet != MIX_INIT_MODPLUG)
 	{
 		cout << "SDLmixer Initiazation Error: " << Mix_GetError() << endl;
 		return mixRet;
@@ -59,6 +60,8 @@ int main(int argc, char** argv){
 	}
 	SDL_TMXMap Map("Resources\\Test.tmx");
 	Map.Populate_Map(ren);
+
+	SDL_SFFWrapper Sprite ("Resources\\kakurinetest.sff");
 	while (isRunning)
 	{
 		while (SDL_PollEvent(&gameLoop))
@@ -92,6 +95,7 @@ int main(int argc, char** argv){
 		SDL_SetRenderDrawColor(ren,255,0,255,SDL_ALPHA_OPAQUE);
 		SDL_RenderClear(ren);
 		Map.Render_Map(ren , &cameraRect);
+		Sprite.Render(0,0,ren);
 		SDL_RenderPresent(ren);
 	}
 	SDL_DestroyRenderer(ren);

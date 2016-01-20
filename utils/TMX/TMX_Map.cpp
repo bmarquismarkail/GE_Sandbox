@@ -4,7 +4,7 @@
 #include <cstring>
 using namespace std;
 
-#include <rapidxml.hpp>
+#include <rapidxml/rapidxml.hpp>
 
 #include "TMX_Map.h"
 

@@ -6,7 +6,7 @@
 #include <inttypes.h>
 using namespace std;
 
-#include <rapidxml.hpp>
+#include <rapidxml/rapidxml.hpp>
 using namespace rapidxml;
 
 #include <b64/decode.h>

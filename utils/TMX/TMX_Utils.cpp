@@ -5,7 +5,7 @@
 using namespace std;
 
 #include <miniz/miniz.h>
-#include <miniz/utils/gzip.c>
+//#include <miniz/utils/gzip.c>
 
 void TMX_Decode(unsigned char* input, unsigned char* output, unsigned len)
 {
@@ -21,6 +21,7 @@ void TMX_Uncompress(unsigned char* input, unsigned char* output, unsigned int in
         memcpy(output, input, in_size);
         return;
     }
+
     if(!strcmp(Scheme, "zlib"))
     {
         unsigned long pLen = out_size;
