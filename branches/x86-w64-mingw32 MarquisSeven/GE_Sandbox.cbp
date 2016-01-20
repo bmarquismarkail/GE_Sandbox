@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Game Engine Sandbox" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="x86-Deb">
+				<Option output="bin/x86/Debug/Game Engine Sandbox" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/x86/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-g" />
+					<Add directory="projects/C++/GE_Sandbox/utils/SFF2/SDL" />
+					<Add directory="E:/dev/libs/C/.installed/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+					<Add directory="E:/dev/libs/C/.installed/lib32/bin" />
+					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib32/bin" />
+					<Add directory="E:/dev/libs/C/.installed/lib32" />
+					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib32" />
+					<Add directory="E:/dev/projects/C++/SFFv2/bin/Debug/x86" />
+				</Linker>
+			</Target>
+			<Target title="x86-Rel">
+				<Option output="bin/x86/Release/Game Engine Sandbox" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/x86/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m32" />
+					<Add directory="projects/C++/GE_Sandbox/utils/SFF2/SDL" />
+					<Add directory="E:/dev/libs/C/.installed/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add directory="E:/dev/libs/C/.installed/lib32/bin" />
+					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib32/bin" />
+					<Add directory="E:/dev/libs/C/.installed/lib32" />
+					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib32" />
+					<Add directory="E:/dev/projects/C++/SFFv2/bin/Release/x86" />
+				</Linker>
+			</Target>
+			<Target title="x64-Deb">
+				<Option output="bin/x64/Debug/Game Engine Sandbox" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/x64/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add directory="projects/C++/GE_Sandbox/utils/SFF2/SDL" />
+					<Add directory="E:/dev/libs/C/.installed/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add directory="E:/dev/libs/C/.installed/lib64/bin" />
+					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib64/bin" />
+					<Add directory="E:/dev/libs/C/.installed/lib64" />
+					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib64" />
+					<Add directory="E:/dev/projects/C++/SFFv2/bin/Debug/x64" />
+				</Linker>
+			</Target>
+			<Target title="x64-Rel">
+				<Option output="bin/x64/Release/Game Engine Sandbox" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/x64/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add directory="projects/C++/GE_Sandbox/utils/SFF2/SDL" />
+					<Add directory="E:/dev/libs/C/.installed/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add directory="E:/dev/libs/C/.installed/lib64/bin" />
+					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib64/bin" />
+					<Add directory="E:/dev/libs/C/.installed/lib64" />
+					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib64" />
+					<Add directory="E:/dev/projects/C++/SFFv2/bin/Release/x64" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All-32" targets="x86-Deb;x86-Rel;" />
+			<Add alias="All-64" targets="x64-Deb;x64-Rel;" />
+			<Add alias="All-Build" targets="x86-Deb;x86-Rel;x64-Deb;x64-Rel;" />
+			<Add alias="All-Debug" targets="x86-Deb;x64-Deb;" />
+			<Add alias="All-Release" targets="x86-Rel;x64-Rel;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DBUFFERSIZE=16777216" />
+			<Add directory="E:/dev/projects/C++/SFFv2/~SVN/sdlv2/trunk/src" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDL2_mixer" />
+			<Add library="SDL2_image" />
+			<Add library="SDL2main" />
+			<Add library="SDL2" />
+			<Add library="b64" />
+			<Add library="atomic" />
+			<Add library="libSFFv2" />
+		</Linker>
+		<Unit filename="../../../libs/C/.installed/include/miniz/miniz.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../libs/C/.installed/include/miniz/miniz.h" />
+		<Unit filename="../SFF2ViewerRedux/src/SDL_SFFWrapper.cpp" />
+		<Unit filename="../SFF2ViewerRedux/src/SDL_SFFWrapper.h" />
+		<Unit filename="ProgLog.txt" />
+		<Unit filename="main.cpp" />
+		<Unit filename="utils/TMX/SDL/TMX_SDLClass.cpp" />
+		<Unit filename="utils/TMX/SDL/TMX_SDLClass.h" />
+		<Unit filename="utils/TMX/TMX_Data.cpp" />
+		<Unit filename="utils/TMX/TMX_Image.cpp" />
+		<Unit filename="utils/TMX/TMX_Layer.cpp" />
+		<Unit filename="utils/TMX/TMX_Map.cpp" />
+		<Unit filename="utils/TMX/TMX_Map.h" />
+		<Unit filename="utils/TMX/TMX_Tile.cpp" />
+		<Unit filename="utils/TMX/TMX_Tileset.cpp" />
+		<Unit filename="utils/TMX/TMX_Utils.cpp" />
+		<Unit filename="utils/TMX/TMX_Utils.h" />
+		<Extensions>
+			<code_completion />
+			<envvars set="mingww64_32" />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,613 @@
+# depslib dependency file v1.0
+1448588423 source:e:\dev\projects\c++\ge_sandbox\main.cpp
+	<iostream>
+	<SDL.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_mixer.h>
+	"utils/TMX/SDL/TMX_SDLClass.h"
+	"../SFF2ViewerRedux/src/SDL_SFFWrapper.h"
+
+1387840900 source:e:\dev\projects\c++\ge_sandbox\tiled_editor.cpp
+	<iostream>
+	<sstream>
+	<fstream>
+	<cstdlib>
+	<cmath>
+	<rapidxml.hpp>
+	"Tiled_Editor.h"
+	"TMX_Utils.h"
+
+1387697038 e:\dev\projects\c++\ge_sandbox\tiled_editor.h
+	<string>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	"TMX_Map.h"
+
+1424082602 e:\dev\projects\c++\ge_sandbox\tmx_map.h
+	<string>
+	<vector>
+	<rapidxml.hpp>
+
+1424019492 source:e:\dev\projects\c++\ge_sandbox\tmx_utils.cpp
+	"TMX_Utils.h"
+	<cstring>
+	<iostream>
+	<miniz/miniz.h>
+	<miniz/utils/gzip.c>
+
+1424018297 e:\dev\projects\c++\ge_sandbox\tmx_utils.h
+	<sstream>
+	<string>
+	<inttypes.h>
+	<rapidxml.hpp>
+	<b64/decode.h>
+
+1424078715 source:e:\dev\projects\c++\ge_sandbox\tmx_map.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<cstring>
+	<rapidxml.hpp>
+	"TMX_Map.h"
+
+1424079002 source:e:\dev\projects\c++\ge_sandbox\tmx_tileset.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1390606782 source:e:\dev\projects\c++\ge_sandbox\tmx_image.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1392595785 source:e:\dev\projects\c++\ge_sandbox\tmx_data.cpp
+	<cstring>
+	<iostream>
+	<algorithm>
+	"TMX_Map.h"
+
+1387988760 source:e:\dev\projects\c++\ge_sandbox\tmx_tile.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1391027821 source:e:\dev\projects\c++\ge_sandbox\tmx_layer.cpp
+	<cstring>
+	<iostream>
+	"TMX_Map.h"
+
+1424091240 source:e:\dev\projects\c++\ge_sandbox\tmx_sdlclass.cpp
+	<iostream>
+	<sstream>
+	<fstream>
+	<cmath>
+	"TMX_SDLClass.h"
+	"TMX_Utils.h"
+	<SDL2/SDL_image.h>
+
+1391172115 e:\dev\projects\c++\ge_sandbox\tmx_sdlclass.h
+	<SDL2/SDL.h>
+	"TMX_Map.h"
+
+1381712544 source:e:\dev\libs\c\.installed\include\miniz\miniz.c
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<assert.h>
+	<stdio.h>
+	<sys/stat.h>
+	<sys/utime.h>
+	<sys/utime.h>
+	<sys/utime.h>
+	<utime.h>
+	<utime.h>
+
+1448588634 source:e:\dev\projects\c++\ge_sandbox\utils\tmx\sdl\tmx_sdlclass.cpp
+	<iostream>
+	<sstream>
+	<fstream>
+	<cmath>
+	<stdlib.h>
+	"TMX_SDLClass.h"
+	"../TMX_Utils.h"
+	<SDL2/SDL_image.h>
+
+1433731371 e:\dev\projects\c++\ge_sandbox\utils\tmx\sdl\tmx_sdlclass.h
+	<SDL2/SDL.h>
+	"../TMX_Map.h"
+
+1447667385 e:\dev\projects\c++\ge_sandbox\utils\tmx\tmx_map.h
+	<string>
+	<vector>
+	<rapidxml/rapidxml.hpp>
+
+1447667398 e:\dev\projects\c++\ge_sandbox\utils\tmx\tmx_utils.h
+	<sstream>
+	<string>
+	<inttypes.h>
+	<rapidxml/rapidxml.hpp>
+	<b64/decode.h>
+
+1448583705 source:e:\dev\projects\c++\ge_sandbox\utils\tmx\tmx_data.cpp
+	<cstring>
+	<iostream>
+	<algorithm>
+	"TMX_Map.h"
+
+1432603905 source:e:\dev\projects\c++\ge_sandbox\utils\tmx\tmx_image.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1432603905 source:e:\dev\projects\c++\ge_sandbox\utils\tmx\tmx_layer.cpp
+	<cstring>
+	<iostream>
+	"TMX_Map.h"
+
+1447670831 source:e:\dev\projects\c++\ge_sandbox\utils\tmx\tmx_map.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<cstring>
+	<rapidxml/rapidxml.hpp>
+	"TMX_Map.h"
+
+1432603905 source:e:\dev\projects\c++\ge_sandbox\utils\tmx\tmx_tile.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1432603905 source:e:\dev\projects\c++\ge_sandbox\utils\tmx\tmx_tileset.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1448588550 source:e:\dev\projects\c++\ge_sandbox\utils\tmx\tmx_utils.cpp
+	"TMX_Utils.h"
+	<cstring>
+	<iostream>
+	<miniz/miniz.h>
+
+1434042522 source:e:\dev\libs\c\.installed\include\miniz\utils\gzip.c
+	<unistd.h>
+	<stdint.h>
+	<stdarg.h>
+	<string.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<stdio.h>
+	<miniz/miniz.h>
+
+1436030090 source:e:\dev\projects\c++\ge_sandbox\utils\sff2\sdl\sff2_sdlclass.cpp
+	"SFF2_SDLClass.h"
+
+1435892782 e:\dev\projects\c++\ge_sandbox\utils\sff2\sdl\sff2_sdlclass.h
+	<vector>
+	<SDL2/SDL.h>
+	"SFF2File.h"
+
+1436716606 e:\dev\projects\c++\sffv2\src\\sff2file.h
+	<fstream>
+	"sff2header.h"
+	"SFF2_SpriteNode.h"
+	"SFF2_PalNode.h"
+	"utiltype/SFF2MemBlock.h"
+
+1414236654 e:\dev\projects\c++\sffv2\src\\sff2header.h
+	<fstream>
+	"utiltype/sff2int.h"
+
+1414235469 e:\dev\projects\c++\sffv2\src\\utiltype\sff2int.h
+	<cstdint>
+	<stdint.h>
+
+1415063768 e:\dev\projects\c++\sffv2\src\\sff2_spritenode.h
+	<fstream>
+	"utiltype/sff2int.h"
+
+1415064646 e:\dev\projects\c++\sffv2\src\\sff2_palnode.h
+	<fstream>
+	"utiltype/sff2int.h"
+
+1414938994 e:\dev\projects\c++\sffv2\src\\utiltype\sff2memblock.h
+	<fstream>
+	"sff2int.h"
+
+1436713452 e:\dev\projects\c++\sff2viewerredux\src\sdl_sffwrapper.h
+	<fstream>
+	<SDL2/SDL.h>
+	"SFF2File.h"
+	"types/enums.h"
+
+1414940144 e:\dev\projects\c++\sff2viewerredux\src\types\enums.h
+
+1436719756 source:e:\dev\projects\c++\sff2viewerredux\src\sdl_sffwrapper.cpp
+	"SDL_SFFWrapper.h"
+	<stdio.h>
+
+1436713006 e:\dev\projects\c++\sffv2\~svn\sdlv2\trunk\src\sff2file.h
+	<fstream>
+	"sff2header.h"
+	"SFF2_SpriteNode.h"
+	"SFF2_PalNode.h"
+	"utiltype/SFF2MemBlock.h"
+
+1414233054 e:\dev\projects\c++\sffv2\~svn\sdlv2\trunk\src\sff2header.h
+	<fstream>
+	"utiltype/sff2int.h"
+
+1414231869 e:\dev\projects\c++\sffv2\~svn\sdlv2\trunk\src\utiltype\sff2int.h
+	<cstdint>
+	<stdint.h>
+
+1415060168 e:\dev\projects\c++\sffv2\~svn\sdlv2\trunk\src\sff2_spritenode.h
+	<fstream>
+	"utiltype/sff2int.h"
+
+1415061046 e:\dev\projects\c++\sffv2\~svn\sdlv2\trunk\src\sff2_palnode.h
+	<fstream>
+	"utiltype/sff2int.h"
+
+1414935394 e:\dev\projects\c++\sffv2\~svn\sdlv2\trunk\src\utiltype\sff2memblock.h
+	<fstream>
+	"sff2int.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<iconv.h>
+	<sal.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\begin_code.h
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\close_code.h
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<mbarrier.h>
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<mmintrin.h>
+	<mm3dnow.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705422 e:\dev\libs\c\.installed\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448705423 e:\dev\libs\c\.installed\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448706912 e:\dev\libs\c\.installed\include\sdl2\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1242197178 e:\dev\libs\c\.installed\include\rapidxml\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1371556176 e:\dev\libs\c\.installed\include\b64\decode.h
+	<iostream>
+	"cdecode.h"
+
+1371556176 e:\dev\libs\c\.installed\include\b64\cdecode.h
+
+1448706487 e:\dev\libs\c\.installed\include\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1448530389 e:\dev\libs\c\.installed\include\miniz\miniz.h
+	"miniz.c"
+
+1381712544 e:\dev\libs\c\.installed\include\miniz\miniz.c
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<assert.h>
+	<stdio.h>
+	<sys/stat.h>
+	<sys/utime.h>
+	<sys/utime.h>
+	<sys/utime.h>
+	<utime.h>
+	<utime.h>
+
+1447672808 e:\dev\libs\c\.installed\include\miniz\utils\gzip.c
+
