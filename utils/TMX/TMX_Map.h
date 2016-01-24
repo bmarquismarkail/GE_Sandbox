@@ -10,13 +10,27 @@ using namespace rapidxml;
 
 struct TMX_Property
 {
+    public:
+        TMX_Property();
+        TMX_Property(char *data, xml_node<> *node);
+        void Load_Property(char *data, xml_node<> *node);
+        string getName();
+        string getValue();
+	private:
 	string name;
 	string value;
 };
 
-struct TMX_Properties
+class TMX_Properties
 {
-	vector<TMX_Property> Property;
+    public:
+        TMX_Properties();
+        TMX_Properties(char *data, xml_node<> *node);
+        void Load_Properties(char *data, xml_node<> *node);
+        TMX_Property getProperty(unsigned index);
+        TMX_Property getProperty(const char *name);
+    private:
+        vector<TMX_Property> Property;
 };
 
 struct TMX_TileOffset
@@ -216,6 +230,7 @@ public:
 	unsigned long getTileWidth();
 	unsigned long getTileHeight();
 	string getBackgroundColor();
+	TMX_Properties getProperties(unsigned index);
 	TMX_Tileset getTileset(unsigned index);
 	TMX_Layer getLayer(unsigned index);
 	unsigned findTileset(unsigned int GID);

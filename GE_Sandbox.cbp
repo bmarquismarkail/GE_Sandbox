@@ -14,7 +14,6 @@
 				<Compiler>
 					<Add option="-m32" />
 					<Add option="-g" />
-					<Add directory="projects/C++/GE_Sandbox/utils/SFF2/SDL" />
 					<Add directory="E:/dev/libs/C/.installed/include" />
 				</Compiler>
 				<Linker>
@@ -23,7 +22,8 @@
 					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib32/bin" />
 					<Add directory="E:/dev/libs/C/.installed/lib32" />
 					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib32" />
-					<Add directory="E:/dev/projects/C++/SFFv2/bin/Debug/x86" />
+					<Add directory="E:/dev/projects/C++/SFFv2/~svn/branches/x86_64-w64-mingw32-Codeblocks/bin/Debug/x86" />
+					<Add directory="E:/dev/libs/C/src/miniz/bin/x86/Debug" />
 				</Linker>
 			</Target>
 			<Target title="x86-Rel">
@@ -34,7 +34,6 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-m32" />
-					<Add directory="projects/C++/GE_Sandbox/utils/SFF2/SDL" />
 					<Add directory="E:/dev/libs/C/.installed/include" />
 				</Compiler>
 				<Linker>
@@ -44,7 +43,8 @@
 					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib32/bin" />
 					<Add directory="E:/dev/libs/C/.installed/lib32" />
 					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib32" />
-					<Add directory="E:/dev/projects/C++/SFFv2/bin/Release/x86" />
+					<Add directory="E:/dev/projects/C++/SFFv2/~svn/branches/x86_64-w64-mingw32-Codeblocks/bin/Release/x86" />
+					<Add directory="E:/dev/libs/C/src/miniz/bin/x86/Release" />
 				</Linker>
 			</Target>
 			<Target title="x64-Deb">
@@ -55,7 +55,6 @@
 				<Compiler>
 					<Add option="-m64" />
 					<Add option="-g" />
-					<Add directory="projects/C++/GE_Sandbox/utils/SFF2/SDL" />
 					<Add directory="E:/dev/libs/C/.installed/include" />
 				</Compiler>
 				<Linker>
@@ -64,7 +63,8 @@
 					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib64/bin" />
 					<Add directory="E:/dev/libs/C/.installed/lib64" />
 					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib64" />
-					<Add directory="E:/dev/projects/C++/SFFv2/bin/Debug/x64" />
+					<Add directory="E:/dev/projects/C++/SFFv2/~svn/branches/x86_64-w64-mingw32-Codeblocks/bin/Debug/x64" />
+					<Add directory="E:/dev/libs/C/src/miniz/bin/x64/Debug" />
 				</Linker>
 			</Target>
 			<Target title="x64-Rel">
@@ -75,7 +75,6 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-m64" />
-					<Add directory="projects/C++/GE_Sandbox/utils/SFF2/SDL" />
 					<Add directory="E:/dev/libs/C/.installed/include" />
 				</Compiler>
 				<Linker>
@@ -85,7 +84,8 @@
 					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib64/bin" />
 					<Add directory="E:/dev/libs/C/.installed/lib64" />
 					<Add directory="E:/dev/lang/C/mingw64-multilib/x86_64-w64-mingw32/lib64" />
-					<Add directory="E:/dev/projects/C++/SFFv2/bin/Release/x64" />
+					<Add directory="E:/dev/projects/C++/SFFv2/~svn/branches/x86_64-w64-mingw32-Codeblocks/bin/Release/x64" />
+					<Add directory="E:/dev/libs/C/src/miniz/bin/x64/Release" />
 				</Linker>
 			</Target>
 		</Build>
@@ -99,7 +99,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-DBUFFERSIZE=16777216" />
-			<Add directory="E:/dev/projects/C++/SFFv2/~SVN/sdlv2/trunk/src" />
+			<Add directory="E:/dev/projects/C++/SFFv2/~svn/trunk" />
 		</Compiler>
 		<Linker>
 			<Add library="mingw32" />
@@ -110,13 +110,10 @@
 			<Add library="b64" />
 			<Add library="atomic" />
 			<Add library="libSFFv2" />
+			<Add library="miniz" />
 		</Linker>
-		<Unit filename="../../../libs/C/.installed/include/miniz/miniz.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../../libs/C/.installed/include/miniz/miniz.h" />
-		<Unit filename="../SFF2ViewerRedux/src/SDL_SFFWrapper.cpp" />
-		<Unit filename="../SFF2ViewerRedux/src/SDL_SFFWrapper.h" />
+		<Unit filename="../../../../SFF2ViewerRedux/src/SDL_SFFWrapper.cpp" />
+		<Unit filename="../../../../SFF2ViewerRedux/src/SDL_SFFWrapper.h" />
 		<Unit filename="ProgLog.txt" />
 		<Unit filename="main.cpp" />
 		<Unit filename="utils/TMX/SDL/TMX_SDLClass.cpp" />
@@ -126,13 +123,14 @@
 		<Unit filename="utils/TMX/TMX_Layer.cpp" />
 		<Unit filename="utils/TMX/TMX_Map.cpp" />
 		<Unit filename="utils/TMX/TMX_Map.h" />
+		<Unit filename="utils/TMX/TMX_Properties.cpp" />
 		<Unit filename="utils/TMX/TMX_Tile.cpp" />
 		<Unit filename="utils/TMX/TMX_Tileset.cpp" />
 		<Unit filename="utils/TMX/TMX_Utils.cpp" />
 		<Unit filename="utils/TMX/TMX_Utils.h" />
 		<Extensions>
 			<code_completion />
-			<envvars set="mingww64_32" />
+			<envvars set="default" />
 			<debugger />
 			<lib_finder disable_auto="1" />
 		</Extensions>
