@@ -52,6 +52,11 @@ void TMX_Map::Load_Map(char *data)
 	if(pRoot->first_attribute("backgroundcolor"))	BackgroundColor.assign (pRoot->first_attribute("backgroundcolor")->value());
 	for (rapidxml::xml_node<> *iNode = pRoot->first_node() ; iNode ; iNode = iNode->next_sibling())
 	{
+		if (!strcmp(iNode->name(), "properties"))
+		{
+			TMX_Properties tmp_Properties(data, iNode);
+			Properties.push_back(tmp_Properties);
+		}
 		if (!strcmp(iNode->name(), "tileset"))
 		{
 			TMX_Tileset tmp_Tileset(data, iNode);
@@ -104,6 +109,11 @@ unsigned long TMX_Map::getTileHeight()
 string TMX_Map::getBackgroundColor()
 {
 	return BackgroundColor;
+}
+
+TMX_Properties TMX_Map::getProperties(unsigned index)
+{
+    return Properties.at(index);
 }
 
 TMX_Tileset TMX_Map::getTileset(unsigned index)
