@@ -98,8 +98,8 @@ void SDL_TMXMap::Populate_Map(SDL_Renderer *Render)
             memcpy( in_data[i] , getLayer(i).getData().getData().c_str() , getLayer(i).getData().getData().size() );
             unsigned char *dec_data = new unsigned char[( getLayer(i).getData().getData().size())];
             TMX_Decode( in_data[i] , dec_data , getLayer(i).getData().getData().size() );
-            TMX_Uncompress( dec_data , out_data[i] , ( getLayer(i).getData().getData().size() ), getWidth() * getHeight() * 4,
-                           getLayer(i).getData().getCompression().c_str());
+            if (!strcmp(getLayer(i).getData().getCompression().c_str(),"")) memcpy(out_data[i], dec_data, getWidth() * getHeight() * 4);
+            else TMX_Uncompress( dec_data , out_data[i] , ( getLayer(i).getData().getData().size() ), getWidth() * getHeight() * 4, getLayer(i).getData().getCompression().c_str());
         }
 
         delete[]in_data;

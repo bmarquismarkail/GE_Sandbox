@@ -64,6 +64,13 @@ int main(int argc, char** argv){
 	Map.Populate_Map(ren);
 
 	SDL_SFFWrapper Sprite ("Resources\\kakurinetest.sff");
+	const int AxisX = 8 * 3.125;
+	const int AxisY = 19 * 2.679;
+	Sprite.setPosX( (winwidth / 2) - AxisX );
+    Sprite.setPosY( (winheight / 2)  - AxisY );
+	Sprite.setWidth( Sprite.GetSpriteNode(0)->GetWidth() * 3.125 );
+	Sprite.setHeight( Sprite.GetSpriteNode(0)->GetHeight() * 2.679 );
+
 	while (isRunning)
 	{
 		while (SDL_PollEvent(&gameLoop))
@@ -72,35 +79,47 @@ int main(int argc, char** argv){
 				isRunning = false;
 			if ( gameLoop.key.state == SDL_PRESSED )
 				switch (gameLoop.key.keysym.sym){
-			case  SDLK_UP:
-				yVel = -16;
-				break;
-			case SDLK_DOWN:
-				yVel = 16;
-				break;
-			case SDLK_LEFT:
-				xVel = -16;
-				break;
-			case SDLK_RIGHT:
-				xVel = 16;
-				break;
+                    case  SDLK_UP: yVel = -6;
+                    break;
+                    case SDLK_DOWN:	yVel = 6;
+                    break;
+                    case SDLK_LEFT: xVel = -6;
+                    break;
+                    case SDLK_RIGHT:xVel = 6;
+                    break;
+				}
+            if ( gameLoop.key.state == SDL_RELEASED )
+				switch (gameLoop.key.keysym.sym){
+                    case  SDLK_UP:
+                    case SDLK_DOWN:	yVel = 0;
+                    break;
+                    case SDLK_LEFT:
+                    case SDLK_RIGHT: xVel = 0;
+                    break;
 				}
 		}
-		cameraRect.x +=xVel;
-		if (cameraRect.x < 0) cameraRect.x = 0;
-		else if ((unsigned)cameraRect.x > (Map.getWidth() * Map.getTileWidth()) - (unsigned)cameraRect.w)
-				cameraRect.x = (Map.getWidth() * Map.getTileWidth()) - cameraRect.w;
-		cameraRect.y +=yVel;
-		if (cameraRect.y < 0) cameraRect.y = 0;
-		else if ((unsigned)cameraRect.y >= (Map.getHeight() * Map.getTileHeight()) - (unsigned)cameraRect.h)
-			cameraRect.y = (Map.getHeight() * Map.getTileHeight()) - cameraRect.h;
+
+        if (xVel)
+        {
+            if( Sprite.getPosX() + xVel > 0 && Sprite.getPosX() + xVel < winwidth - Sprite.getWidth() )
+                Sprite.setPosX(Sprite.getPosX() + xVel);
+            else if( cameraRect.x + xVel > 0 && ((unsigned)cameraRect.x + xVel < ( ( Map.getWidth() * Map.getTileWidth() ) - (unsigned) cameraRect.w ) ) )
+                cameraRect.x += xVel;
+        }
+        if (yVel)
+        {
+            if( Sprite.getPosY() + yVel > 0 && Sprite.getPosY() + yVel < winheight - Sprite.getHeight() )
+                Sprite.setPosY(Sprite.getPosY() + yVel);
+            else if( cameraRect.y + yVel > 0 && ((unsigned)cameraRect.y + yVel < ( ( Map.getHeight() * Map.getTileHeight() ) - (unsigned) cameraRect.h ) ) )
+                cameraRect.y += yVel;
+        }
+
+
+
+
 		SDL_SetRenderDrawColor(ren,255,0,255,SDL_ALPHA_OPAQUE);
 		SDL_RenderClear(ren);
 		Map.Render_Map(ren , &cameraRect);
-		Sprite.setPosX( (winwidth / 2) - (8 * 3.125) );
-		Sprite.setPosY( (winheight / 2)  - (19 * 2.679) );
-		Sprite.setWidth( Sprite.GetSpriteNode(0)->GetWidth() * 3.125 );
-		Sprite.setHeight( Sprite.GetSpriteNode(0)->GetHeight() * 2.679 );
 		Sprite.Render(0,0,ren);
 		SDL_RenderPresent(ren);
 	}
