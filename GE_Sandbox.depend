@@ -502,3 +502,90 @@
 	<cstring>
 	"TMX_Map.h"
 
+1453699212 source:e:\dev\projects\c++\ge_sandbox\git\utils\tmx\sdl\tmx_sdlclass.cpp
+	<iostream>
+	<sstream>
+	<fstream>
+	<cmath>
+	<stdlib.h>
+	"TMX_SDLClass.h"
+	"../TMX_Utils.h"
+	<SDL2/SDL_image.h>
+
+1433731371 e:\dev\projects\c++\ge_sandbox\git\utils\tmx\sdl\tmx_sdlclass.h
+	<SDL2/SDL.h>
+	"../TMX_Map.h"
+
+1453613137 e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_map.h
+	<string>
+	<vector>
+	<rapidxml/rapidxml.hpp>
+
+1447667398 e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_utils.h
+	<sstream>
+	<string>
+	<inttypes.h>
+	<rapidxml/rapidxml.hpp>
+	<b64/decode.h>
+
+1448583705 source:e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_data.cpp
+	<cstring>
+	<iostream>
+	<algorithm>
+	"TMX_Map.h"
+
+1432603905 source:e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_image.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1432603905 source:e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_layer.cpp
+	<cstring>
+	<iostream>
+	"TMX_Map.h"
+
+1453612589 source:e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_map.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<cstring>
+	<rapidxml/rapidxml.hpp>
+	"TMX_Map.h"
+
+1453614241 source:e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_properties.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1432603905 source:e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_tile.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1453614312 source:e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_tileset.cpp
+	<cstring>
+	"TMX_Map.h"
+
+1454018905 source:e:\dev\projects\c++\ge_sandbox\git\utils\tmx\tmx_utils.cpp
+	"TMX_Utils.h"
+	<cstring>
+	<iostream>
+	<miniz/miniz.h>
+
+1454222529 source:e:\dev\projects\c++\ge_sandbox\git\main.cpp
+	<iostream>
+	<SDL.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_mixer.h>
+	"utils/TMX/SDL/TMX_SDLClass.h"
+	"utils/SFF2/SDL/SDL_SFFWrapper.h"
+
+1453963271 e:\dev\projects\c++\ge_sandbox\git\utils\sff2\sdl\sdl_sffwrapper.h
+	<fstream>
+	<SDL2/SDL.h>
+	"SFF2File.h"
+	"types/enums.h"
+
+1414940144 e:\dev\projects\c++\ge_sandbox\git\utils\sff2\sdl\types\enums.h
+
+1453963271 source:e:\dev\projects\c++\ge_sandbox\git\utils\sff2\sdl\sdl_sffwrapper.cpp
+	"SDL_SFFWrapper.h"
+	<stdio.h>
+

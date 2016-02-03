@@ -112,10 +112,10 @@
 			<Add library="libSFFv2" />
 			<Add library="miniz" />
 		</Linker>
-		<Unit filename="../../../../SFF2ViewerRedux/src/SDL_SFFWrapper.cpp" />
-		<Unit filename="../../../../SFF2ViewerRedux/src/SDL_SFFWrapper.h" />
 		<Unit filename="ProgLog.txt" />
 		<Unit filename="main.cpp" />
+		<Unit filename="utils/SFF2/SDL/SDL_SFFWrapper.cpp" />
+		<Unit filename="utils/SFF2/SDL/SDL_SFFWrapper.h" />
 		<Unit filename="utils/TMX/SDL/TMX_SDLClass.cpp" />
 		<Unit filename="utils/TMX/SDL/TMX_SDLClass.h" />
 		<Unit filename="utils/TMX/TMX_Data.cpp" />

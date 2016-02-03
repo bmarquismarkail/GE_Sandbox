@@ -2,49 +2,29 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="x64-Deb" />
-	<File name="utils\TMX\TMX_Utils.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="utils\SFF2\SDL\SDL_SFFWrapper.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="485" topLine="0" />
+			<Cursor1 position="2358" topLine="19" />
 		</Cursor>
 	</File>
-	<File name="utils\TMX\TMX_Layer.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="utils\SFF2\SDL\SDL_SFFWrapper.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="387" topLine="0" />
+			<Cursor1 position="837" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="utils\TMX\SDL\TMX_SDLClass.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="utils\TMX\SDL\TMX_SDLClass.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6141" topLine="86" />
+			<Cursor1 position="6555" topLine="86" />
 		</Cursor>
 	</File>
-	<File name="utils\TMX\TMX_Tile.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="utils\TMX\SDL\TMX_SDLClass.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="108" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="utils\TMX\TMX_Data.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="713" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="utils\TMX\TMX_Properties.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="582" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="utils\TMX\TMX_Map.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2198" topLine="58" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3239" topLine="46" />
-		</Cursor>
-	</File>
-	<File name="utils\TMX\TMX_Utils.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="537" topLine="5" />
 		</Cursor>
 	</File>
 	<File name="utils\TMX\TMX_Image.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -57,14 +37,19 @@
 			<Cursor1 position="2034" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\..\..\..\SFF2ViewerRedux\src\SDL_SFFWrapper.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="utils\TMX\TMX_Layer.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1761" topLine="15" />
+			<Cursor1 position="387" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\..\..\..\SFF2ViewerRedux\src\SDL_SFFWrapper.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="503" topLine="0" />
+			<Cursor1 position="686" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="utils\TMX\TMX_Map.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2198" topLine="58" />
 		</Cursor>
 	</File>
 	<File name="utils\TMX\TMX_Map.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -72,9 +57,14 @@
 			<Cursor1 position="423" topLine="136" />
 		</Cursor>
 	</File>
-	<File name="utils\TMX\SDL\TMX_SDLClass.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="utils\TMX\TMX_Properties.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="108" topLine="0" />
+			<Cursor1 position="582" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="utils\TMX\TMX_Tile.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="utils\TMX\TMX_Tileset.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -82,4 +72,15 @@
 			<Cursor1 position="1343" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="utils\TMX\TMX_Utils.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1521" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="utils\TMX\TMX_Utils.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="485" topLine="0" />
+		</Cursor>
+	</File>
+	<EditorTabsLayout layout="095bd41856b197440000295400000002=*0;Game Engine Sandbox:main.cpp,1;Game Engine Sandbox:utils\TMX\SDL\TMX_SDLClass.cpp,2;Game Engine Sandbox:utils\SFF2\SDL\SDL_SFFWrapper.h,3;Game Engine Sandbox:utils\SFF2\SDL\SDL_SFFWrapper.cpp,4;Game Engine Sandbox:utils\TMX\TMX_Utils.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=793;besth=472;minw=793;minh=472;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=095bd41856b197440000295400000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
 </CodeBlocks_layout_file>
