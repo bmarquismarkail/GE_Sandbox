@@ -16,11 +16,6 @@ void TMX_Decode(unsigned char* input, unsigned char* output, unsigned len)
 
 void TMX_Uncompress(unsigned char* input, unsigned char* output, unsigned int in_size, unsigned int out_size, const char* Scheme)
 {
-    if(!strcmp(Scheme, ""))
-    {
-        memcpy(output, input, in_size);
-        return;
-    }
     if(!strcmp(Scheme, "zlib"))
     {
         unsigned long pLen = out_size;

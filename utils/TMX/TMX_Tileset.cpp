@@ -32,7 +32,11 @@ void TMX_Tileset::Load_Tileset(char *data, xml_node<> *node)
     for(xml_node<> *iNode = node->first_node() ; iNode; iNode = iNode->next_sibling() )
     {
         //if(!strcmp(iNode->name(), "tileoffset"))
-        //if(!strcmp(iNode->name(), "properties"))
+		if (!strcmp(iNode->name(), "properties"))
+		{
+			TMX_Properties tmp_Properties(data, iNode);
+			Properties.push_back(tmp_Properties);
+		}
         if(!strcmp(iNode->name(), "image"))
         {
             TMX_Image tmp_Image(data, iNode);
